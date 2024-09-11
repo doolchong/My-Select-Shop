@@ -28,8 +28,8 @@ public class ProductService {
     private final ProductRepository productRepository;
 
     public static final int MIN_MY_PRICE = 100;
-    private final FolderRepository folderRepository;
     private final ProductFolderRepository productFolderRepository;
+    private final FolderRepository folderRepository;
 
     public ProductResponseDto createProduct(ProductRequestDto requestDto, User user) {
         Product product = productRepository.save(new Product(requestDto, user));
